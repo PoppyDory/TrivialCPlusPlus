@@ -11,7 +11,7 @@ nuovo numero random se false -------> moltiplichiamo per 5 e prendiamo la linea 
 
 stampiamo domanda corrispondente + le 4 righe 
 utente sceglie risposta 
-se risposta scelta presente in array risposte ----> stampa esatto -----> ++ contatore(servirà per punteggio finale)
+se risposta scelta presente in array risposte ----> stampa esatto -----> ++ contatore(servira' per punteggio finale)
 altrimenti stampa sbagliato 
 
 per terminare partita "frase".

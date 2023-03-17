@@ -7,7 +7,7 @@ I sumeri.
 Francese, italiano, tedesco e romancio.
 Cina.
 116.
-Fédération International de Football Association.
+Federation International de Football Association.
 Ogni 4 anni.
 In Inghilterra.
 Frutta.
@@ -22,7 +22,7 @@ Esegue prima un' istruzione, poi la condizione.
 Con ' std::cout<< '.
 '+', '-', '*', '/', '%'.
 Nulla.
-Con // per una sola riga, con /**/ per più righe.
+Con // per una sola riga, con /**/ per piu' righe.
 Funzione main.
 Legge riga per riga da un file aperto.
 2020.
