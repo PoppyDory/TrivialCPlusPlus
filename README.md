@@ -2,6 +2,8 @@
 
 <B> Trivial Pursuit versione C++ </b>
 
+<U> Spiegazione dell'esercizio in pseudocodice</U>
+
 bool domande[30];
 string risposte[30];
 apriamo file quiz (ifstream)
