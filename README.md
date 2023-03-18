@@ -1,8 +1,12 @@
 # TrivialCPlusPlus
+<b> Presentazione del progetto di fine corso </B>
+Il seguente progetto è stato realizzato da Marzia, Rosita e Valerio per la chiusura del corso di programmazione in C++ organizzato da AstroIT in collaborazione con Umana.
+Il programma rappresenta un semplice gioco a risposta multipla.
+Il programma è stato sviluppato con argomentazioni studiate ed approfondite in questo corso. 
 
 <B> Trivial Pursuit versione C++ </b>
 
-<U> Spiegazione dell'esercizio in pseudocodice </U>
+<u> Spiegazione dell'esercizio in pseudocodice </u>
 
 1 -Inizializziamo un array bool domande[30] <br>
 2 -Inizializziamo un array string risposte[30] <br>
