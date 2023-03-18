@@ -1,6 +1,6 @@
 # TrivialCPlusPlus
 
-Trivial Pursuit versione C++
+<B> Trivial Pursuit versione C++ </b>
 
 bool domande[30];
 string risposte[30];
