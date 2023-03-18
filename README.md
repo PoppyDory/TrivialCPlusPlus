@@ -2,10 +2,10 @@
 
 <B> Trivial Pursuit versione C++ </b>
 
-<U> Spiegazione dell'esercizio in pseudocodice</U>
+<U> Spiegazione dell'esercizio in pseudocodice </U>
 
 1 -Inizializziamo un array bool domande[30] <br>
-2 - string risposte[30] <br>
+2 -Inizializziamo un array string risposte[30] <br>
 3 - apriamo file quiz (ifstream)<br>
 4 - scelgo numero random % 30<br>
 5 - controllo bool domande se true (gia chiesta) chiediamo nuova domanda <br>
