@@ -18,5 +18,5 @@ Il programma è stato sviluppato con argomentazioni studiate ed approfondite in 
 7 - stampiamo domanda corrispondente + le 4 righe (riposte) <br> 
 8 - utente sceglie risposta <br>
 9 - se risposta scelta presente in array risposte ----> stampa esatto -----> contatotre ++, contatore(servira' per punteggio finale)<br>
-10 - se risposta non è presente in array risposte sbagliate stampa sbagliato 
+10 - se risposta non è presente in array risposte sbagliate stampa sbagliato <br>
 11 - per terminare partita "frase".<br>
