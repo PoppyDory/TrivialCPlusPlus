@@ -36,6 +36,7 @@ int main()
     string questAnswer; // file stampato su stringa
     int numeroRisposta =0;
     int contatore = 0; // contatore su righe da stampare
+    string risposte[5];
     // while(getline(fileRisposteGiuste,risposteGiuste)) volevo far scorrere le risposte giuste
     //  bisogna inizializzare o un int o una string per risposta giusta
     while (getline(fileQuestAnswer, questAnswer))
@@ -45,10 +46,12 @@ int main()
             { 
                 cout <<questAnswer << endl; // stampo lariga della domanda 
             }
+       
         for (int i = 1; i < 5; i++)
         {
             if (contatore == rigaDomanda + i)
             { 
+                risposte[i] = questAnswer;
                 cout << i <<"." <<questAnswer << endl; // stampo le succhessive 4 righe con le possibili risposte e gli indici 
             }
         }
@@ -56,16 +59,21 @@ int main()
     cout<< "scrivi numero per risposta giusta da 1 a 4" << endl;
     cin >> numeroRisposta ;
     string risposteGiuste;
-    numeroRisposta = indiceDomanda +1;
-    cout << numeroRisposta <<endl ;
     int trovaRiga=0;
+        cout<< risposte[numeroRisposta] << endl;
+    
     while(getline(fileRisposteGiuste,risposteGiuste))
     {
+        numeroRisposta = indiceDomanda +1;
+        //cout << numeroRisposta <<endl ;
         trovaRiga++;
-        if(trovaRiga == numeroRisposta){
+        if((trovaRiga == numeroRisposta) && (risposte[numeroRisposta] == risposteGiuste)){
+        
         cout<< risposteGiuste << endl;
+        cout<< numeroRisposta << endl;
         }
+        else{
+            cout<<"stupitooo" << endl;
+        }        //confrontare stringa di risposteGiuste con filedomande
     }
-
 }
-
