@@ -30,7 +30,7 @@ int main()
     while (giaUscite[indiceDomanda] == true); // solo se vero
 
     cout << indiceDomanda << endl;
-    rigaDomanda = indiceDomanda *5;
+    rigaDomanda = indiceDomanda *5 +1;
     cout << rigaDomanda << endl;
 
     string questAnswer; // file stampato su stringa
