@@ -70,7 +70,7 @@ int main()
     string risposteGiuste;
     int trovaRiga = 0; // conta le righe fino a indice domanda
     bool seGiusto = false;
-    string correzione = " ";
+    string correzione ="";
 
     while (getline(fileRisposteGiuste, risposteGiuste))
     {
@@ -79,8 +79,10 @@ int main()
         if ((trovaRiga == indiceDomanda + 1) && (risposte[numeroRisposta] == risposteGiuste))
         {
             seGiusto = true;
-            cout << risposteGiuste << endl;
-        } // confrontare stringa di risposteGiuste con filedomande
+        } 
+        else if((trovaRiga == indiceDomanda + 1) && (risposte[numeroRisposta] != risposteGiuste)){
+        correzione = risposteGiuste;
+        }
     }
 
     if (seGiusto == true)
@@ -90,14 +92,7 @@ int main()
     else
     {
         cout << "Purtoppo e' sbagliato" << endl;
-        cout << "La risposta corretta e': " << correzione << endl;
+        cout << "La risposta corretta e': "<< correzione << endl;
     }
-    int indiceRiga = 0;
-    while (getline(fileRisposteGiuste, risposteGiuste))
-    {indiceRiga ++;
-        if (indiceRiga == indiceDomanda + 1)
-        {
-            cout << risposteGiuste << endl;
-        }
-    }
+
 }
