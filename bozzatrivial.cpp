@@ -28,7 +28,8 @@ int main()
     int domandeRimaste = 5;
     while (domandeRimaste > 0)
     {
-
+        ifstream fileQuestAnswer("domandeRisposte.txt");   // apro file di tutte domande risposte
+        ifstream fileRisposteGiuste("risposteGiuste.txt"); // apro file di tutte risposte giuste
         int indiceDomanda = 0;
         int rigaDomanda = 0;
 
@@ -108,6 +109,11 @@ int main()
                 cout << risposteGiuste << endl;
             }
         }
+        
+        domandeRimaste--;
+        fileQuestAnswer.close();
+        fileRisposteGiuste.close();
     }
-    domandeRimaste--;
+    
+    
 }
