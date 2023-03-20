@@ -30,7 +30,7 @@ int main()
     while (giaUscite[indiceDomanda] == true); // solo se vero
 
     cout << indiceDomanda << endl;
-    rigaDomanda = indiceDomanda *5;
+    rigaDomanda = indiceDomanda *5 +1;
     cout << rigaDomanda << endl;
 
     string questAnswer; // file stampato su stringa
@@ -42,20 +42,21 @@ int main()
     while (getline(fileQuestAnswer, questAnswer))
     {
         contatore++;
-            if (contatore == rigaDomanda +1)
+            if (contatore == rigaDomanda)
             { 
                 cout <<questAnswer << endl;
             }
         for (int i = 1; i < 5; i++)
         {
-            if (contatore == (rigaDomanda +1) + i)
+            if (contatore == rigaDomanda + i)
             { 
                 cout << i <<"." <<questAnswer << endl;
             }
         }
-    }    //cout<< "scrivi numero per risposta giusta da 1 a 4" << endl;
-        //cin >> numeroRisposta ;
-        // while(getline(fileRisposteGiuste,risposteGiuste))
+    }
+    cout<< "scrivi numero per risposta giusta da 1 a 4" << endl;
+    cin >> numeroRisposta ;
+    //while(getline(fileRisposteGiuste,risposteGiuste)) // per s
         //{
         // if(risposta == risposteGiuste){
         // cout<< "giusto!" << endl;
