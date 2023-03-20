@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     ifstream fileQuestAnswer("domandeRisposte.txt");                   // apro file di tutte domande risposte
-    ifstream fileRisposteGiuste("risposteEsatte.txt");                 // apro file di tutte risposte giuste
+    ifstream fileRisposteGiuste("risposteGiuste.txt");                 // apro file di tutte risposte giuste
     if ((fileQuestAnswer.is_open()) && (fileRisposteGiuste.is_open())) // sono aperti domande e risposte e risposte giuste
     {
         cout << "fileOk" << endl;
@@ -30,7 +30,7 @@ int main()
     while (giaUscite[indiceDomanda] == true); // solo se vero
 
     cout << indiceDomanda << endl;
-    rigaDomanda = indiceDomanda *5 +1;
+    rigaDomanda = indiceDomanda *5;
     cout << rigaDomanda << endl;
 
     string questAnswer; // file stampato su stringa
@@ -44,13 +44,13 @@ int main()
         contatore++;
             if (contatore == rigaDomanda)
             { 
-                cout <<questAnswer << endl;
+                cout <<questAnswer << endl; // stampo lariga della domanda 
             }
         for (int i = 1; i < 5; i++)
         {
             if (contatore == rigaDomanda + i)
             { 
-                cout << i <<"." <<questAnswer << endl;
+                cout << i <<"." <<questAnswer << endl; // stampo le succhessive 4 righe con le possibili risposte e gli indici 
             }
         }
     }
