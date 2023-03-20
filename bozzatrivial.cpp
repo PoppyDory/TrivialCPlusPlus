@@ -42,12 +42,14 @@ int main()
     // while(getline(fileRisposteGiuste,risposteGiuste)) volevo far scorrere le risposte giuste
     //  bisogna inizializzare o un int o una string per risposta giusta
     cout << endl;
+    cout<< "Domanda numero "<< indiceDomanda + 1 <<endl;
+    cout<<" ------------------"<<endl;
     while (getline(fileQuestAnswer, questAnswer))
     {
         contatore++;
         if (contatore == rigaDomanda)
         {
-            cout << indiceDomanda + 1 << ". "<< questAnswer << endl;
+            cout << questAnswer << endl;
             cout << endl; // stampo lariga della domanda
         }
     
