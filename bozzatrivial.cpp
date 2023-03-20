@@ -92,10 +92,10 @@ int main()
         cout << "Purtoppo e' sbagliato" << endl;
         cout << "La risposta corretta e': " << correzione << endl;
     }
-
+    int indiceRiga = 0;
     while (getline(fileRisposteGiuste, risposteGiuste))
-    {
-        if (indiceDomanda + 1)
+    {indiceRiga ++;
+        if (indiceRiga == indiceDomanda + 1)
         {
             cout << risposteGiuste << endl;
         }
