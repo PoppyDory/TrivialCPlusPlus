@@ -34,7 +34,6 @@ int main()
     cout << rigaDomanda << endl;
 
     string questAnswer; // file stampato su stringa
-    string risposteGiuste;
     int numeroRisposta =0;
     int contatore = 0; // contatore su righe da stampare
     // while(getline(fileRisposteGiuste,risposteGiuste)) volevo far scorrere le risposte giuste
@@ -56,11 +55,17 @@ int main()
     }
     cout<< "scrivi numero per risposta giusta da 1 a 4" << endl;
     cin >> numeroRisposta ;
-    //while(getline(fileRisposteGiuste,risposteGiuste)) // per s
-        //{
-        // if(risposta == risposteGiuste){
-        // cout<< "giusto!" << endl;
-        // }
-        // }
+    string risposteGiuste;
+    numeroRisposta = indiceDomanda +1;
+    cout << numeroRisposta <<endl ;
+    int trovaRiga=0;
+    while(getline(fileRisposteGiuste,risposteGiuste))
+    {
+        trovaRiga++;
+        if(trovaRiga == numeroRisposta){
+        cout<< risposteGiuste << endl;
+        }
+    }
+
 }
 
