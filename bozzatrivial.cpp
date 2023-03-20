@@ -64,8 +64,12 @@ int main()
     {
         // cout << numeroRisposta <<endl ;
         trovaRiga++;
-        if ((trovaRiga == indiceDomanda) && (risposte[numeroRisposta] == risposteGiuste))
+        if ((trovaRiga == indiceDomanda+1) && (risposte[numeroRisposta] == risposteGiuste))
         {
+            cout<< trovaRiga << endl;
+            cout<< indiceDomanda << endl;
+            cout << risposteGiuste << endl;
+            cout << numeroRisposta << endl;
             seGiusto = true;
         } // confrontare stringa di risposteGiuste con filedomande
     }
