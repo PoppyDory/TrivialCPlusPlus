@@ -25,11 +25,11 @@ int main()
     int rigaDomanda = 0;
     do
     {
-        indiceDomanda = rand() % 30;
+        indiceDomanda = rand() % 31;
     } while (giaUscite[indiceDomanda] == true); // solo se vero
 
     cout << indiceDomanda << endl;
-    rigaDomanda = indiceDomanda * 5 + 1;
+    rigaDomanda = indiceDomanda * 5;
     cout << rigaDomanda << endl;
 
     string questAnswer; // file stampato su stringa
@@ -62,10 +62,9 @@ int main()
     bool seGiusto = false;
     while (getline(fileRisposteGiuste, risposteGiuste))
     {
-        numeroRisposta = indiceDomanda + 1;
         // cout << numeroRisposta <<endl ;
         trovaRiga++;
-        if ((trovaRiga == numeroRisposta) && (risposte[numeroRisposta] == risposteGiuste))
+        if ((trovaRiga == indiceDomanda) && (risposte[numeroRisposta] == risposteGiuste))
         {
             seGiusto == true;
         } // confrontare stringa di risposteGiuste con filedomande
