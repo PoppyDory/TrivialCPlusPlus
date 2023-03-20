@@ -41,6 +41,7 @@ int main()
     string risposte[5];
     // while(getline(fileRisposteGiuste,risposteGiuste)) volevo far scorrere le risposte giuste
     //  bisogna inizializzare o un int o una string per risposta giusta
+    cout << endl;
     while (getline(fileQuestAnswer, questAnswer))
     {
         contatore++;
@@ -59,7 +60,7 @@ int main()
             }
         }
     }
-    
+    cout<< endl;
     cout << "Seleziona la risposta giusta da 1 a 4: " << endl;
     int numeroRisposta = 0;
     cin >> numeroRisposta;
