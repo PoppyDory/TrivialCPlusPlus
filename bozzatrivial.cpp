@@ -15,18 +15,18 @@ int main()
     {
         cout << "noFile" << endl;
     }
-    srand(time(NULL));  // random sull orario
-    bool giaUscite[30]; // vero e falso su indice di domanda gia uscite
+    srand(time(NULL));  // random sull orarion
+    bool domandeGiaChieste[30]; 
     for (int y = 0; y < 30; y++)
     {
-        giaUscite[y] = false; // tutto l'arrey è inizialmente falso diventa vero più giu
+        domandeGiaChieste[y] = false; // tutto l'arrey è inizialmente falso, diventa vero quando faccio una domanda 
     }
     int indiceDomanda = 0;
     int rigaDomanda = 0;
     do
     {
         indiceDomanda = rand() % 31;
-    } while (giaUscite[indiceDomanda] == true); // solo se vero
+    } while (domandeGiaChieste[indiceDomanda] == true); // solo se vero
 
     cout << indiceDomanda << endl;
     rigaDomanda = indiceDomanda * 5 +1;
@@ -69,7 +69,7 @@ int main()
             cout<< trovaRiga << endl;
             cout<< indiceDomanda << endl;
             cout << risposteGiuste << endl;
-            cout << numeroRisposta << endl;
+       
             seGiusto = true;
         } // confrontare stringa di risposteGiuste con filedomande
     }
