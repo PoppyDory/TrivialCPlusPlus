@@ -19,7 +19,7 @@ int main()
     bool giaUscite[30]; // vero e falso su indice di domanda gia uscite
     for (int y = 0; y < 30; y++)
     {
-        giaUscite[y] == false; // tutto l'arrey è inizialmente falso diventa vero più giu
+        giaUscite[y] = false; // tutto l'arrey è inizialmente falso diventa vero più giu
     }
     int indiceDomanda = 0;
     int rigaDomanda = 0;
@@ -66,10 +66,10 @@ int main()
         trovaRiga++;
         if ((trovaRiga == indiceDomanda) && (risposte[numeroRisposta] == risposteGiuste))
         {
-            seGiusto == true;
+            seGiusto = true;
         } // confrontare stringa di risposteGiuste con filedomande
     }
-    if (seGiusto = true)
+    if (seGiusto == true)
     {
         cout << "bravo" << endl;
     }
