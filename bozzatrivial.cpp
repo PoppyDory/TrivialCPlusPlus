@@ -30,7 +30,7 @@ int main()
     
     do
     {
-        indiceDomanda = rand() % 31;
+        indiceDomanda = rand() % 30;
     } while (domandeGiaChieste[indiceDomanda] == true); // solo se vero
 
     rigaDomanda = indiceDomanda * 5 +1;
@@ -70,24 +70,39 @@ int main()
     string risposteGiuste;
     int trovaRiga = 0;
     bool seGiusto = false;
+    string correzione = " ";
     
     while (getline(fileRisposteGiuste, risposteGiuste))
     {
         // cout << numeroRisposta <<endl ;
         trovaRiga++;
+        
         if ((trovaRiga == indiceDomanda+1) && (risposte[numeroRisposta] == risposteGiuste))
         {
             seGiusto = true;
+            cout<< risposteGiuste << endl;
+
             
         } // confrontare stringa di risposteGiuste con filedomande
     }
     if (seGiusto == true)
     {
-        cout << "La risposta è GIUSTA" << endl;
+        cout << "La risposta e' GIUSTA" << endl;
     }
     else
     {
         cout << "Purtoppo e' sbagliato" << endl;
-        cout << "La risposta corretta era: " << risposteGiuste << endl;
+        cout << "La risposta corretta e': " << correzione << endl;
+    }
+    while (getline(fileRisposteGiuste, risposteGiuste)){
+                trovaRiga++;
+                if (trovaRiga == indiceDomanda+1)
+        {
+
+            cout<< risposteGiuste << endl;
+
+            
+        } 
+
     }
 }
