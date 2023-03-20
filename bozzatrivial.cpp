@@ -60,20 +60,20 @@ int main()
     cin >> numeroRisposta ;
     string risposteGiuste;
     int trovaRiga=0;
-        cout<< risposte[numeroRisposta] << endl;
-    
+    bool seGiusto = false;
     while(getline(fileRisposteGiuste,risposteGiuste))
     {
         numeroRisposta = indiceDomanda +1;
         //cout << numeroRisposta <<endl ;
         trovaRiga++;
         if((trovaRiga == numeroRisposta) && (risposte[numeroRisposta] == risposteGiuste)){
-        
-        cout<< risposteGiuste << endl;
-        cout<< numeroRisposta << endl;
-        }
-        else{
-            cout<<"stupitooo" << endl;
-        }        //confrontare stringa di risposteGiuste con filedomande
+        seGiusto =true;
+        } //confrontare stringa di risposteGiuste con filedomande
+    }
+    if(seGiusto ==true){
+        cout<<"bravo" << endl;
+    }
+    else{
+        cout<<"stupido" << endl;
     }
 }
