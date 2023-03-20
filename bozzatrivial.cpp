@@ -78,14 +78,16 @@ int main()
         if ((trovaRiga == indiceDomanda+1) && (risposte[numeroRisposta] == risposteGiuste))
         {
             seGiusto = true;
+            
         } // confrontare stringa di risposteGiuste con filedomande
     }
     if (seGiusto == true)
     {
-        cout << "bravo" << endl;
+        cout << "La risposta è GIUSTA" << endl;
     }
     else
     {
-        cout << "stupido" << endl;
+        cout << "Purtoppo e' sbagliato" << endl;
+        cout << "La risposta corretta era: " << risposteGiuste << endl;
     }
 }
