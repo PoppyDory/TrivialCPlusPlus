@@ -26,15 +26,14 @@ int main()
     do
     {
         indiceDomanda = rand() % 30;
-    } 
-    while (giaUscite[indiceDomanda] == true); // solo se vero
+    } while (giaUscite[indiceDomanda] == true); // solo se vero
 
     cout << indiceDomanda << endl;
-    rigaDomanda = indiceDomanda *5 +1;
+    rigaDomanda = indiceDomanda * 5 + 1;
     cout << rigaDomanda << endl;
 
     string questAnswer; // file stampato su stringa
-    int numeroRisposta =0;
+    int numeroRisposta = 0;
     int contatore = 0; // contatore su righe da stampare
     string risposte[5];
     // while(getline(fileRisposteGiuste,risposteGiuste)) volevo far scorrere le risposte giuste
@@ -42,38 +41,41 @@ int main()
     while (getline(fileQuestAnswer, questAnswer))
     {
         contatore++;
-            if (contatore == rigaDomanda)
-            { 
-                cout <<questAnswer << endl; // stampo lariga della domanda 
-            }
-       
+        if (contatore == rigaDomanda)
+        {
+            cout << questAnswer << endl; // stampo lariga della domanda
+        }
+
         for (int i = 1; i < 5; i++)
         {
             if (contatore == rigaDomanda + i)
-            { 
+            {
                 risposte[i] = questAnswer;
-                cout << i <<"." <<questAnswer << endl; // stampo le succhessive 4 righe con le possibili risposte e gli indici 
+                cout << i << "." << questAnswer << endl; // stampo le succhessive 4 righe con le possibili risposte e gli indici
             }
         }
     }
-    cout<< "scrivi numero per risposta giusta da 1 a 4" << endl;
-    cin >> numeroRisposta ;
+    cout << "scrivi numero per risposta giusta da 1 a 4" << endl;
+    cin >> numeroRisposta;
     string risposteGiuste;
-    int trovaRiga=0;
+    int trovaRiga = 0;
     bool seGiusto = false;
-    while(getline(fileRisposteGiuste,risposteGiuste))
+    while (getline(fileRisposteGiuste, risposteGiuste))
     {
-        numeroRisposta = indiceDomanda +1;
-        //cout << numeroRisposta <<endl ;
+        numeroRisposta = indiceDomanda + 1;
+        // cout << numeroRisposta <<endl ;
         trovaRiga++;
-        if((trovaRiga == numeroRisposta) && (risposte[numeroRisposta] == risposteGiuste)){
-        seGiusto =true;
-        } //confrontare stringa di risposteGiuste con filedomande
+        if ((trovaRiga == numeroRisposta) && (risposte[numeroRisposta] == risposteGiuste))
+        {
+            seGiusto == true;
+        } // confrontare stringa di risposteGiuste con filedomande
     }
-    if(seGiusto ==true){
-        cout<<"bravo" << endl;
+    if (seGiusto = true)
+    {
+        cout << "bravo" << endl;
     }
-    else{
-        cout<<"stupido" << endl;
+    else
+    {
+        cout << "stupido" << endl;
     }
 }
