@@ -16,39 +16,40 @@ int main()
     {
         cout << "noFile" << endl;
     }
-    srand(time(NULL)); // random sull orarion
+    srand(time(NULL)); // random sull orario
 
-    bool domandeGiaChieste[30];
+    bool domandeGiaChieste[30]; // mi serve per non ripetere la stessa domanda
 
     for (int y = 0; y < 30; y++)
     {
         domandeGiaChieste[y] = false; // tutto l'arrey è inizialmente falso, diventa vero quando faccio una domanda
     }
     // da qui proviamo while giro domande
-    int domandeRimaste = 5;
+    int domandeRimaste = 5; //imposto che in gioco finisce dopo 5 domande 
     while (domandeRimaste > 0)
     {
-        ifstream fileQuestAnswer("domandeRisposte.txt");   // apro file di tutte domande risposte
-        ifstream fileRisposteGiuste("risposteGiuste.txt"); // apro file di tutte risposte giuste
-        int indiceDomanda = 0;
-        int rigaDomanda = 0;
+        ifstream fileQuestAnswer("domandeRisposte.txt");   // riapro il file delle domande 
+        ifstream fileRisposteGiuste("risposteGiuste.txt"); // riapro il file delle risposte 
+        int indiceDomanda = 0; // mi serve per scegliere un numero per la domanda 
+        int rigaDomanda = 0; // vado a leggere la riga corrispondente nel file domande 
 
         do
         {
             indiceDomanda = rand() % 30;
-        } while (domandeGiaChieste[indiceDomanda] == true); // solo se vero
+        } while (domandeGiaChieste[indiceDomanda] == true); // se in quella posizione trovo vero, trova un altro numero random 
 
-        rigaDomanda = indiceDomanda * 5 + 1;
+        rigaDomanda = indiceDomanda * 5 + 1; // il testo delle domande si trova ogni 5 righe+1
 
         string questAnswer; // file stampato su stringa
 
         int contatore = 0; // contatore su righe da stampare
-        string risposte[5];
-        // while(getline(fileRisposteGiuste,risposteGiuste)) volevo far scorrere le risposte giuste
-        //  bisogna inizializzare o un int o una string per risposta giusta
+        string risposte[5]; // salvo le possibili risposte il un array di appoggio 
+    
+
         cout << endl;
         cout << "Domanda numero " << indiceDomanda + 1 << endl;
         cout << " ------------------" << endl;
+       
         while (getline(fileQuestAnswer, questAnswer))
         {
             contatore++;
