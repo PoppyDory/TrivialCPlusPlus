@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 
-    cout << "Inserisci il tuo nome" << endl;
+    cout << "Inserisci il tuo nome: " << endl;
     string nome;
     cin >> nome;
     int punteggio;
