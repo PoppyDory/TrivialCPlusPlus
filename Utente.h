@@ -1,18 +1,22 @@
 #ifndef UTENTE_H
 #define UTENTE_H
 
-class Utente {
-    private:
+using namespace std;
+
+class Utente
+{
+private:
     string nome;
     int punteggio;
     int partite;
 
-    public: 
-    //costruttore 
-    Utente( string nome, int punteggio){
-        nome=nome;
-        punteggio=punteggio;
-        partite =0;
+public:
+    // costruttore
+    Utente(string n, int p)
+    {
+        nome = n;
+        punteggio = p;
+        partite = 0;
     }
 
     string getNome()
@@ -26,7 +30,7 @@ class Utente {
 
     void incrementaPunteggio(int punti)
     {
-        punteggio+=punti;
+        punteggio += punti;
     }
 
     void finePartita()
@@ -38,6 +42,5 @@ class Utente {
     {
         return partite;
     }
-   
-}; 
+};
 #endif
