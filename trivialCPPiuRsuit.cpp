@@ -171,6 +171,8 @@ int main()
     giocatore.incrementaPunteggio(contaGiuste);
     // vedere nome
     cout << "------------------" << endl;
+    cout << "Il gioco e' terminato. "<< endl;
+    cout << "------------------" << endl;
     cout << giocatore.getNome() << endl;
     // vedere il punteggio
     cout << giocatore.getPunteggio() << endl;

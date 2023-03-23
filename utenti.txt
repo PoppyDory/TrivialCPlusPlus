@@ -1,7 +1,7 @@
 Valerio
 50
 Rosita
-40
+90
 Marzia
 10
 Marius
@@ -16,3 +16,5 @@ alessandra
 30
 Veu
 0
+Lorenzo
+50
