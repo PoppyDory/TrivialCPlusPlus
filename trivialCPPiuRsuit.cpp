@@ -122,6 +122,12 @@ int main()
         int numeroRisposta = 0;
         cin >> numeroRisposta;
 
+        while((numeroRisposta<1) || (numeroRisposta>4))
+        {
+            cout<< " Scegli un numero da 1 a 4. "<< endl;
+            cin >> numeroRisposta;
+        }
+
         string risposteGiuste;
         int trovaRiga = 0; // conta le righe fino a indice domanda
         bool seGiusto = false;
