@@ -27,17 +27,14 @@ public:
     {
         return punteggio;
     }
-
     void incrementaPunteggio(int punti)
     {
         punteggio += punti;
     }
-
     void finePartita()
     {
         partite++;
     }
-
     int getPartite()
     {
         return partite;

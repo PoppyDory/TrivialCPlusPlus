@@ -129,7 +129,6 @@ int main()
 
         while (getline(fileRisposteGiuste, risposteGiuste))
         {
-            // cout << numeroRisposta <<endl ;
             trovaRiga++;
             if ((trovaRiga == indiceDomanda + 1) && (risposte[numeroRisposta] == risposteGiuste))
             {
@@ -148,7 +147,7 @@ int main()
         }
         else
         {   
-            cout << "Purtoppo e' sbagliato" << endl;
+            cout << "Purtoppo hai SBAGLIATO" << endl;
             cout << "La risposta corretta e': " << correzione << endl;
         }
         int indiceRiga = 0;
@@ -171,13 +170,13 @@ int main()
     // incremento punteggio
     giocatore.incrementaPunteggio(contaGiuste);
     // vedere nome
-     cout << "------------------" << endl;
+    cout << "------------------" << endl;
     cout << giocatore.getNome() << endl;
     // vedere il punteggio
     cout << giocatore.getPunteggio() << endl;
     // vedere partite giocate
     cout << giocatore.getPartite() << endl;
-     cout << "------------------" << endl;
+    cout << "------------------" << endl;
 
     //se ho un nuovo giocatore
     if (nuovo)
@@ -220,6 +219,7 @@ int main()
         ofstream fileTemporaneoS; //scrivo nel file temporaneo
         fileTemporaneoS.open("utentiTemp.txt");
         fileUtenti2.open("utenti.txt");
+        
         while (getline(fileUtenti2, riga)) //leggo tutto il file utenti 
         {
             if (riga == giocatore.getNome()) //fino a quando non trovo nome corrispondente
