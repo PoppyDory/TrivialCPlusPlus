@@ -136,7 +136,7 @@ int main()
         while (getline(fileRisposteGiuste, risposteGiuste))
         {
             trovaRiga++;
-            if ((trovaRiga == indiceDomanda + 1) && (risposte[numeroRisposta] == risposteGiuste))
+            if ((trovaRiga == indiceDomanda + 1) && (risposte[numeroRisposta] == risposteGiuste)) // confronto prima gli indici delle righe e poi se le stringhe sono uguali 
             {
                 contaGiuste+=10;
                 seGiusto = true;
@@ -162,11 +162,11 @@ int main()
             indiceRiga++;
             if (indiceRiga == indiceDomanda + 1)
             {
-                cout << risposteGiuste << endl;
+                cout << risposteGiuste << endl; 
             }
         }
 
-        domandeRimaste--;
+        domandeRimaste--;  // decremento dal numero di domande iniziali
         fileQuestAnswer.close();
         fileRisposteGiuste.close();
     }

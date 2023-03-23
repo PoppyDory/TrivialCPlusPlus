@@ -5,12 +5,14 @@ using namespace std;
 
 class Utente
 {
-private:
-    string nome;
+private: 
+    // attributi 
+    string nome;   
     int punteggio;
     int partite;
 
 public:
+    //metodi
     // costruttore
     Utente(string n, int p)
     {
@@ -19,23 +21,23 @@ public:
         partite = 0;
     }
 
-    string getNome()
+    string getNome() // stampa a schermo il nome
     {
         return nome;
     }
-    int getPunteggio()
+    int getPunteggio()  // stampa a schermo il punteggio
     {
         return punteggio;
     }
-    void incrementaPunteggio(int punti)
+    void incrementaPunteggio(int punti) //serve a incrementare il punteggio 
     {
         punteggio += punti;
     }
-    void finePartita()
+    void finePartita()  // incrementa la partuita
     {
         partite++;
     }
-    int getPartite()
+    int getPartite()    // stampa a schermo il numero di partite 
     {
         return partite;
     }

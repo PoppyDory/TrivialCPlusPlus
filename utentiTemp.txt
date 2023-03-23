@@ -1,13 +1,13 @@
 Valerio
-50
+100
 Rosita
-90
+140
 Marzia
-10
+60
 Marius
 40
 Gatto
-20
+70
 MarcoL
 10
 jacopo
@@ -18,3 +18,5 @@ Veu
 0
 Lorenzo
 50
+Simone
+110
